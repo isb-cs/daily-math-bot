@@ -20,6 +20,7 @@ SOLUTIONS = {
     "Wednesday": "1weQ5R2dZptlXdbiMlYgfnSveQrcnAvzV",
     "Thursday": "1nC1yakba4qy6TAe0t260Rt_7KQ-Ng2wf",
     "Friday": "1jY_te4tGHm-eD39luAzagYqH9_kiceXf",
+    "Sunday": "1o085neW9Mwkzz6IUqcbkrOgGFMu4g3Bi",
 }
 #    "Saturday": "1_YOUR_SAT_SOLUTION_ID_HERE",
 #    "Sunday": "1_YOUR_SUN_SOLUTION_ID_HERE",
