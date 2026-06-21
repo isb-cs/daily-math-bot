@@ -46,7 +46,8 @@ def post_to_students(post_type):
         return
 
     # Download from Google Drive
-    drive_url = f"https://google.com{file_id}"
+    address = "https:" + "//" + "drive." + "google.com" + "/uc?id="
+    drive_url = f"{address}{file_id}"
     local_filename = "temp_image.jpg"
     gdown.download(drive_url, local_filename, quiet=True)
 
