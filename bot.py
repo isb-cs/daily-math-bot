@@ -6,24 +6,22 @@ import gdown
 
 # 1. Map days of the week to your Google Drive File IDs
 PROBLEMS = {
-    "Monday": "1_YOUR_MONDAY_PROBLEM_ID_HERE",
-    "Tuesday": "1_YOUR_TUESDAY_PROBLEM_ID_HERE",
-    "Wednesday": "1_YOUR_WED_PROBLEM_ID_HERE",
-    "Thursday": "1_YOUR_THU_PROBLEM_ID_HERE",
-    "Friday": "1_YOUR_FRI_PROBLEM_ID_HERE",
-    "Saturday": "1_YOUR_SAT_PROBLEM_ID_HERE",
-    "Sunday": "1_YOUR_SUN_PROBLEM_ID_HERE",
+    "Monday": "1nCHma_8bXUj3Fq66uemUXDMjcUdWZF6O",
+    "Tuesday": "19Y6PIyZxOjARBrZRZ3jAtoPThgqpKOPW",
+    "Wednesday": "1uf0u-tlcl4oVu2dPFKo7enp6WiCygDGm",
+    "Thursday": "1q7yPGHXqSbIWJxcuAP3z9Y2VzXcVF-yT",
+    "Friday": "12abf69tKCpnIi66oFDJNxOhLLlOCvh2n",
 }
 
 SOLUTIONS = {
-    "Monday": "1_YOUR_MONDAY_SOLUTION_ID_HERE",
-    "Tuesday": "1_YOUR_TUESDAY_SOLUTION_ID_HERE",
-    "Wednesday": "1_YOUR_WED_SOLUTION_ID_HERE",
-    "Thursday": "1_YOUR_THU_SOLUTION_ID_HERE",
-    "Friday": "1_YOUR_FRI_SOLUTION_ID_HERE",
-    "Saturday": "1_YOUR_SAT_SOLUTION_ID_HERE",
-    "Sunday": "1_YOUR_SUN_SOLUTION_ID_HERE",
+    "Monday": "190FeDwH1azMLPtvyH4wWLAiDt7v2iGSZ",
+    "Tuesday": "1HLYFA9DJeKxOAI1JeaooIJb_c-f_-UPn",
+    "Wednesday": "1weQ5R2dZptlXdbiMlYgfnSveQrcnAvzV",
+    "Thursday": "1nC1yakba4qy6TAe0t260Rt_7KQ-Ng2wf",
+    "Friday": "1jY_te4tGHm-eD39luAzagYqH9_kiceXf",
 }
+#    "Saturday": "1_YOUR_SAT_SOLUTION_ID_HERE",
+#    "Sunday": "1_YOUR_SUN_SOLUTION_ID_HERE",
 
 # 2. Grab the webhook URL from GitHub's secure secret vault
 WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
