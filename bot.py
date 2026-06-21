@@ -11,6 +11,7 @@ PROBLEMS = {
     "Wednesday": "1uf0u-tlcl4oVu2dPFKo7enp6WiCygDGm",
     "Thursday": "1q7yPGHXqSbIWJxcuAP3z9Y2VzXcVF-yT",
     "Friday": "12abf69tKCpnIi66oFDJNxOhLLlOCvh2n",
+    "Sunday": "1sZXTmCB1jYifPpg1NHtQDj9Nm49lwfPA",
 }
 
 SOLUTIONS = {
