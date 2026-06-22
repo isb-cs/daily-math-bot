@@ -1,14 +1,11 @@
-name: Run Daily Math Posting
 name: Run Daily Math Postings
 
 on:
   schedule:
-    # 08:05 AM UTC turns into 10:05 AM in Zurich.
-    # Moving it to 5 minutes past the hour cuts through the GitHub traffic jam
+    # 1. Morning Post Trigger (10:05 AM Zurich)
     - cron: '5 8 * * *'
-    
-    # 07:05 PM UTC turns into 09:05 PM (21:05) in Zurich.
-    - cron: '20 12 * * *'
+    # 2. Afternoon Post Trigger (4:05 PM Zurich)
+    - cron: '5 14 * * *'
   workflow_dispatch:
 
 jobs:
@@ -33,7 +30,7 @@ jobs:
         run: python bot.py morning
 
       - name: Run Evening Post
-        if: github.event.schedule == '20 12 * * *'
+        if: github.event.schedule == '5 14 * * *'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: python bot.py evening
