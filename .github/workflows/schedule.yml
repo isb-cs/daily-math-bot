@@ -8,7 +8,7 @@ on:
     - cron: '5 8 * * *'
     
     # 07:05 PM UTC turns into 09:05 PM (21:05) in Zurich.
-    - cron: '5 19 * * *'
+    - cron: '20 12 * * *'
   workflow_dispatch:
 
 jobs:
