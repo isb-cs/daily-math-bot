@@ -1,12 +1,15 @@
 name: Run Daily Math Posting
+name: Run Daily Math Postings
+
 on:
   schedule:
-    # GitHub uses UTC time. 
-    # 08:00 UTC is 10:00 AM Central European Summer Time (CEST)
-    - cron: '0 8 * * *'
-    # 19:00 UTC is 09:00 PM Central European Summer Time (CEST)
-    - cron: '0 19 * * *'
-  workflow_dispatch: # This adds a manual "Run" button so you can test it instantly!
+    # 08:05 AM UTC turns into 10:05 AM in Zurich.
+    # Moving it to 5 minutes past the hour cuts through the GitHub traffic jam
+    - cron: '5 8 * * *'
+    
+    # 07:05 PM UTC turns into 09:05 PM (21:05) in Zurich.
+    - cron: '5 19 * * *'
+  workflow_dispatch:
 
 jobs:
   run-bot:
@@ -24,15 +27,13 @@ jobs:
         run: pip install requests gdown
 
       - name: Run Morning Post
-        # If it is 8:00 AM UTC, run the morning version of our script
-        if: github.event.schedule == '0 8 * * *' || github.event_name == 'workflow_dispatch'
+        if: github.event.schedule == '5 8 * * *' || github.event_name == 'workflow_dispatch'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: python bot.py morning
 
       - name: Run Evening Post
-        # If it is 7:00 PM UTC, run the evening version of our script
-        if: github.event.schedule == '0 19 * * *'
+        if: github.event.schedule == '5 19 * * *'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: python bot.py evening
